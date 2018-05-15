@@ -1,0 +1,55 @@
+#!/bin/bash
+#if  [ "$( docker container ls | grep -q eavp )" == "" ]
+#then
+#	if [ "$( docker images | grep -q eavp )" == "" ]
+#	then
+#		docker pull smithrw/eavp
+#	fi
+	
+#	docker run -p 8913:8090 --name eavp eavp &
+#fi
+
+#Set the jetty stopper to run when the process dies or when the browser is closed
+#trap traphandler CHLD
+#trap traphandler EXIT
+
+#Function to stop the jetty server
+#traphandler() {
+	#mvn jetty:stop
+#	docker ps -a | awk '{ print $1,$2 }' | grep iceman | awk '{print $1 }' | xargs -I {} docker stop {}
+#}
+
+if [ "$#" -ne 1 ]; then  
+
+#Run the jetty server with maven and capture console output
+	exec 3< <(docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/files -e ICEMAN_install_dir=$(pwd) -e ICEMAN_host=$1 -p 8913:8090 iceman
+)
+	echo "ICEMAN is now running. In a web browser, open http://localhost:$1/ui/ICEMAN in a web browser"
+else
+	echo "To run ICEMAN in windows, first open a command prompt. Type \"docker-machine ip default\" and you will get a number like 192.168.99.100 as output. Then come back to this window and type \"./ICEMAN-windows 192.168.99.100\" with 192.168.99.100 being replaced by the number you got."
+fi 
+
+#Get the first line of output
+#read <&3 line;
+
+#Read the input of the server process until start message is recieved
+#while [[ $line != *"Started Jetty Server"* ]]; do 
+	
+	#If the server has an error, stop the process
+#	if [[ $line == *"[ERROR]"* ]]
+#	then
+#		echo "Error starting ICEMAN."
+#		exit 1
+#	fi
+	
+	#Read the next line
+#	read <&3 line 
+#done
+
+#mvn jetty:stop
+
+#Now that the server is started, open the base URL with the browser
+#su -c "xdg-open http://localhost:8913/ui/ICEMAN" $SUDO_USER 
+#sudo -u $SUDO_USER xdg-open http://localhost:8913/ui/ICEMAN
+#xdg-open --no-sandbox http://localhost:8913/ui/ICEMAN
+

@@ -1,0 +1,31 @@
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 12714
+    # data points      = 2994
+    # variables        = 18
+    chi-square         = 13487788.9
+    reduced chi-square = 4532.18714
+    Akaike info crit   = 25224.3117
+    Bayesian info crit = 25332.3902
+[[Variables]]
+    Q1_Lorentz1_wid:       0.02562233 +/- 0.00000000 (0.00%) (init = 0.5)
+    Q1_Lorentz1_cen:       47.5858267 +/- 0.00000000 (0.00%) (init = 0.0001)
+    Q1_Lorentz1_amp:       0.95298706 +/- 0.00000000 (0.00%) (init = 1)
+    Q1_Delta1_cen:         47.5858267 +/- 0.00000000 (0.00%) == 'Q1_Lorentz1_cen'
+    Q1_Delta1_amp:         5.7987e-06 +/- 0.00000000 (0.00%) (init = 1)
+    Q1_Linear1_slope:      1.1521e-05 +/- 0.00000000 (0.00%) (init = 1e-08)
+    Q1_Linear1_intercept:  0.54839614 +/- 0.00000000 (0.00%) (init = 1e-08)
+    Q2_Lorentz1_wid:       0.10240599 +/- 0.00000000 (0.00%) (init = 0.5)
+    Q2_Lorentz1_cen:      -57.2283960 +/- 0.00000000 (0.00%) (init = 0.0001)
+    Q2_Lorentz1_amp:       2.51891188 +/- 0.00000000 (0.00%) (init = 1)
+    Q2_Delta1_cen:        -57.2283960 +/- 0.00000000 (0.00%) == 'Q2_Lorentz1_cen'
+    Q2_Delta1_amp:         1.2153e-10 +/- 0.00000000 (0.00%) (init = 1)
+    Q2_Linear1_slope:     -1.9016e-05 +/- 0.00000000 (0.00%) (init = 1e-08)
+    Q2_Linear1_intercept:  0.18801528 +/- 0.00000000 (0.00%) (init = 1e-08)
+    Q3_Lorentz1_wid:       0.02836841 +/- 0.00000000 (0.00%) (init = 0.5)
+    Q3_Lorentz1_cen:       17.6061247 +/- 0.00000000 (0.00%) (init = 0.0001)
+    Q3_Lorentz1_amp:       1.30864457 +/- 0.00000000 (0.00%) (init = 1)
+    Q3_Delta1_cen:         17.6061247 +/- 0.00000000 (0.00%) == 'Q3_Lorentz1_cen'
+    Q3_Delta1_amp:         7.6286e-10 +/- 0.00000000 (0.00%) (init = 1)
+    Q3_Linear1_slope:     -3.1454e-06 +/- 0.00000000 (0.00%) (init = 1e-08)
+    Q3_Linear1_intercept:  0.40247718 +/- 0.00000000 (0.00%) (init = 1e-08)

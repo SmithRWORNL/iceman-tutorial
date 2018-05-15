@@ -1,0 +1,7 @@
+#!/bin/bash
+docker pull smithrw/iceman
+docker tag smithrw/iceman iceman
+docker pull ornliceman/oclimax_dev
+docker pull smithrw/qclimax
+docker tag smithrw/qclimax qclimax
+echo "Installation complete"
